@@ -13,10 +13,7 @@
         switch_layout: switch_layout {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LCTRL &kp SPACE>,
-                <&macro_wait_time 100>,
-                <&kp RCTRL>;
+            bindings = <&kp LC(SPACE)>, <&macro_wait_time 100>, <&kp RCTRL>;
 
             label = "SWITCH_LAYOUT";
         };
