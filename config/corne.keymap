@@ -8,16 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define HM_A MT(MOD_LCTL, A)   // A = LCTRL при удержании
-#define HM_S MT(MOD_LALT, S)   // S = LALT при удержании
-#define HM_D MT(MOD_LGUI, D)   // D = LGUI (WIN/CMD) при удержании
-#define HM_F MT(MOD_LSFT, F)   // F = LSHIFT при удержании
-
-#define HM_G MT(MOD_RSFT, G)   // G = RSHIFT при удержании
-#define HM_H MT(MOD_RGUI, H)   // H = RGUI (WIN/CMD) при удержании
-#define HM_J MT(MOD_RALT, J)   // J = RALT при удержании
-#define HM_K MT(MOD_RCTL, K)   // K = RCTRL при удержании
-
 / {
     macros {
         switch_layout: switch_layout {
@@ -26,34 +16,6 @@
             bindings = <&kp LC(SPACE)>, <&macro_wait_time 100>, <&kp RCTRL>;
 
             label = "SWITCH_LAYOUT";
-        };
-
-        osm_lctl_lalt: osm_lctl_lalt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&os LCTRL>, <&os LALT>;
-            label = "OSM_LCTL_LALT";
-        };
-
-        osm_lalt_lgui: osm_lalt_lgui {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&os LALT>, <&os LGUI>;
-            label = "OSM_LALT_LGUI";
-        };
-
-        osm_lctl_lalt_lgui: osm_lctl_lalt_lgui {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&os LCTL>, <&os LALT>, <&os LGUI>;
-            label = "OSM_LCTL_LALT_LGUI";
-        };
-
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LGUI(4))>;  // LSHIFT + LGUI + 4
-            label = "SCREENSHOT";
         };
     };
 
@@ -69,9 +31,9 @@
 
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y        &kp U            &kp I      &kp O    &kp P     &switch_layout
-&kp LSHFT      HM_A   HM_S   HM_D      HM_F       HM_G           HM_H         HM_J             HM_K       &kp L    &kp SEMI  &kp SQT
-&mt LGUI ESC  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_GUI ESC
-                             &kp LCTRL  &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 5 BACKSPACE  &kp RALT
+&kp LSHFT      &kp A  &kp S  &kp D     &kp F      &kp G          &kp H        &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LCTRL ESC  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_GUI ESC
+                             &kp LGUI  &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 5 BACKSPACE  &kp RALT
             >;
         };
 
@@ -83,9 +45,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&osm_lalt_lgui  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      &mo 4
-&osm_lctl_lalt   &trans  &trans  &trans    &trans  &kp &screenshot    &kp LEFT       &kp DOWN           &kp UP              &kp RIGHT       &caps_word  &trans
-&osm_lctl_lalt_lgui   &trans  &trans  &trans    &trans  &kp DEL                 &mt LALT LEFT  &mt LG(END) PG_DN  &mt LG(HOME) PG_UP  &mt LALT RIGHT  &trans      &trans
+&kp TAB  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      &mo 4
+&trans   &trans  &trans  &trans    &trans  &kp LS(LG(NUMBER_4))    &kp LEFT       &kp DOWN           &kp UP              &kp RIGHT       &caps_word  &trans
+&trans   &trans  &trans  &trans    &trans  &kp DEL                 &mt LALT LEFT  &mt LG(END) PG_DN  &mt LG(HOME) PG_UP  &mt LALT RIGHT  &trans      &trans
                          &kp LGUI  &trans  &kp SPACE               &mo 4          &trans             &kp RALT
             >;
         };
