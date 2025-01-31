@@ -10,7 +10,6 @@
 
 &mt {
     tapping-term-ms = <240>;
-    hold-trigger-key = <true>;
 };
 
 / {
