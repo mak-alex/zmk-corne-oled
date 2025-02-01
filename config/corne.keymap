@@ -1,14 +1,13 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt { tapping-term-ms = <240>; };
+&mt {
+    tapping-term-ms = <200>;  // Время ожидания для Home Row Mods (200 мс)
+    quick-tap-ms = <150>;     // Ускоряет определение TAP
+    flavor = "balanced";      // Оптимальный режим
+    hold-trigger-key = <false>; // Убирает "ложные" холды при печати
+};
 
 &lt {
     quick-tap-ms = <150>;
@@ -20,7 +19,7 @@
         switch_layout: switch_layout {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&macro_wait_time 100>, <&kp RCTRL>;
+            bindings = <&kp LCTRL>, <&macro_wait_time 50>, <&kp SPACE>, <&macro_wait_time 50>, <&macro_release LCTRL>;
 
             label = "SWITCH_LAYOUT";
         };
