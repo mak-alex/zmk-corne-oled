@@ -1,4 +1,4 @@
-switch_layuot: macro_macos_int_grave {
+switch_layuot: macro_macos_int_switch_layout {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LC(SPACE)>, <&macro_release>;
