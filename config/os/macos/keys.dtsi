@@ -4,3 +4,5 @@
 #define MKY_TAB  &mt          RIGHT    TAB  // tap: tab    | long-tap: right (terminal autocompletion)
 #define MNV_BSPC &mt          LA(BSPC) BSPC // tap: bspc   | long-tap: delete word backward
 #define MNV_DEL  &mt          LA(DEL)  DEL  // tap: del    | long-tap: delete word forward
+#define MPV_DWN &mt         PG_DN     DOWN // tap: down   | long-tap: page down
+#define MPV_UP  &mt         PG_UP     UP   // tap: up     | long-tap: page up

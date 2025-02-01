@@ -63,8 +63,8 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
             display-name = "mAXN";
             bindings = <
 &kp TAB      &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      MNV_DEL
-&trans       &trans  &trans  mp_ma_prev    &mp_ma_next  &kp LS(LG(NUMBER_4))    &kp LEFT       &kp DOWN           &kp UP              &kp RIGHT       &caps_word  MNV_BSPC
-&bootloader  MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  &kp DEL                 &mt LALT LEFT  &mt LG(END) PG_DN  &mt LG(HOME) PG_UP  &mt LALT RIGHT  &trans      &trans
+&trans       &trans  &trans  &mp_ma_prev    &mp_ma_next  &kp LS(LG(NUMBER_4))    &kp LEFT       MPV_DWN           MPV_UP             &kp RIGHT       &caps_word  MNV_BSPC
+&bootloader  MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  &kp DEL                 &mt LALT LEFT  &trans  &trans  &mt LALT RIGHT  &trans      &trans
                              &mp_cs      KEY_SPC      MA38                   MA39  MKY_RET  &mp_dc
             >;
         };
