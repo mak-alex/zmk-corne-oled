@@ -6,7 +6,6 @@
     tapping-term-ms = <200>;  // Время ожидания для Home Row Mods (200 мс)
     quick-tap-ms = <150>;     // Ускоряет определение TAP
     flavor = "balanced";      // Оптимальный режим
-    hold-trigger-key = <false>; // Убирает "ложные" холды при печати
 };
 
 &lt {
