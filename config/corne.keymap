@@ -7,6 +7,12 @@
 #include "os/shared/general.dtsi"
 // #include "os/macos/layers.dtsi"
 
+
+/* Helpers */
+#include "helpers/macros.dtsi"
+#include "helpers/hold.dtsi"
+#include "helpers/morph.dtsi"
+
 / {
     macros {
         #include "os/macos/macros/layers.dtsi"
