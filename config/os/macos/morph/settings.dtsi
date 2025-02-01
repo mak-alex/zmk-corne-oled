@@ -1,0 +1,53 @@
+// tap:          zoom reset
+// shift:        zoom reset vscode
+mp_ma_zoom_reset: morph_mac_action_zoom_reset {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp RG(N0)>, <&kp RG(KP_N0)>;
+};
+
+// mp_mSTG_f
+MORPH_KS(
+    m,
+    STG,
+    f,
+    files,
+    &kp LA(LG(SPACE)),  // tap:   finder
+    &kp LS(LG(DOT))     // shift: show/hide system files
+)
+
+// mp_mSTG_screenshot
+MORPH_KAS(
+    m,
+    STG,
+    screenshot,
+    screenshot,
+    MOD_LALT,
+    &kp RS(RG(N5)),  // tap:   screenshot and recording options
+    &kp RS(RG(N4)),  // alt:   screenshot of selected area
+    &kp RS(RG(N3))   // shift: screenshot of screen
+)
+// ctrl: adding ctrl key copy to clipboard instead of saving a file
+
+// mp_mSTG_rectangle
+MORPH_KAS(
+    m,
+    STG,
+    rectangle,
+    rectangle,
+    MOD_LALT,
+    &kp LA(LC(F)),              // tap:   maximize
+    &kp LA(LC(BACKSPACE)),      // alt:   restore
+    &kp LS(LA(LC(F)))           // shift: center
+)
+
+// mp_mSTG_m
+MORPH_KS(
+    m,
+    STG,
+    m,
+    mute,
+    &kp C_MUTE,                 // tap:   volume mute
+    &kp LS(LA(LC(LG(M))))       // shift: mic mute
+)
