@@ -1,0 +1,22 @@
+switch_layuot: switch_layuot {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LC(SPACE)>, <&macro_release>;
+
+    label = "SWITCH_LAYUOT";
+};
+// action:  `
+m_mi_g: macro_macos_int_grave {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings =
+        <&kp GRAVE &kp SPACE>;
+};
+
+// action:  ~
+m_mi_t: macro_macos_int_tilde {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings =
+        <&kp TILDE &kp SPACE>;
+};

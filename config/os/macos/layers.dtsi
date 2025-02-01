@@ -1,0 +1,6 @@
+/* macOs */
+#define mBAS  0
+#define mDEV  1
+#define mAXN  2
+#define mFNK  3
+#define mSTG  4
