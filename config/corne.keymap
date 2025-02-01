@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      &mo 4
-&trans   &trans  &trans  &trans    &trans  &kp LS(LG(NUMBER_4))    &kp LEFT       &kp DOWN           &kp UP              &kp RIGHT       &caps_word  &trans
-&trans   &trans  &trans  &trans    &trans  &kp DEL                 &mt LALT LEFT  &mt LG(END) PG_DN  &mt LG(HOME) PG_UP  &mt LALT RIGHT  &trans      &trans
-                         &kp LGUI  &trans  &kp SPACE               &mo 4          &trans             &kp RALT
+&kp TAB      &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      &mo 4
+&trans       &trans  &trans  &trans    &trans  &kp LS(LG(NUMBER_4))    &kp LEFT       &kp DOWN           &kp UP              &kp RIGHT       &caps_word  &trans
+&bootloader  &trans  &trans  &trans    &trans  &kp DEL                 &mt LALT LEFT  &mt LG(END) PG_DN  &mt LG(HOME) PG_UP  &mt LALT RIGHT  &trans      &trans
+                             &kp LGUI  &trans  &kp SPACE               &mo 4          &trans             &kp RALT
             >;
         };
 
@@ -92,7 +92,7 @@
 
         sym {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR              &trans
+&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR              &bootloader
 &trans  &trans           &kp K_PLAY_PAUSE  &kp K_MUTE  &kp C_VOL_UP  &kp C_VOL_DN    &kp MINUS       &kp EQUAL  &kp LBRC   &kp RBRC  &kp PIPE              &kp GRAVE
 &trans  &trans           &trans            &trans      &trans        &trans          &kp UNDERSCORE  &kp PLUS   &kp LBKT   &kp RBKT  &kp NON_US_BACKSLASH  &kp GRAVE
                                            &trans      &trans        &trans          &trans          &trans     &trans
