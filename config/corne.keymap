@@ -35,6 +35,7 @@
         #include "os/macos/morph/layers.dtsi"
         #include "os/macos/morph/base.dtsi"
         #include "os/macos/morph/dev.dtsi"
+        #include "os/macos/morph/actions.dtsi"
         #include "os/macos/morph/settings.dtsi"
         #include "os/macos/hold/layers.dtsi"
         #include "os/macos/hold/dev.dtsi"
