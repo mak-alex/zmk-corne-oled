@@ -63,8 +63,8 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
             display-name = "mAXN";
             bindings = <
 &kp TAB      &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      MNV_DEL
-&trans       &trans  &trans  &mp_ma_prev    &mp_ma_next  &kp LS(LG(NUMBER_4))    &kp LEFT       MPV_DWN           MPV_UP             &kp RIGHT       &caps_word  MNV_BSPC
-&bootloader  MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  &kp DEL                 &mt LALT LEFT  &trans  &trans  &mt LALT RIGHT  &trans      &trans
+&bootloader       &trans  &trans  &mp_ma_prev    &mp_ma_next  &kp LS(LG(NUMBER_4))    &kp LEFT       MPV_DWN           MPV_UP             &kp RIGHT       &caps_word  MNV_BSPC
+MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  MKY_REDO  &kp DEL                 &mt LALT LEFT  &trans  &trans  &mt LALT RIGHT  &trans      &trans
                              &mp_cs      KEY_SPC      MA38                   MA39  MKY_RET  &mp_dc
             >;
         };
@@ -110,14 +110,14 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
             #define MSRU2  &kp LS(LA(LG(UP)))           // tap: rectangle top half
             #define MSRU3  &kp LS(LA(LG(LC(RIGHT))))    // tap: rectangle top right
             #define MSRU4  &none
-            #define MSRU5  &bootloader                        // tap: task manager
+            #define MSRU5  &none                        // tap: task manager
 
             #define MSRM0  &mp_mSTG_m                   // tap: vol mute | shift: mic mute
             #define MSRM1  &hm RSHFT  LS(LA(LG(LEFT)))  // tap: rectangle left half
             #define MSRM2  &hm_mSTG_RA  LALT 0          // tap: mp_mSTG_rectangle
             #define MSRM3  &kp LS(LA(LG(RIGHT)))        // tap: rectangle right half
             #define MSRM4  &kp LC(UP)                   // tap: mission control
-            #define MSRM5  &none
+            #define MSRM5  &bootloader
 
             #define MSRD0  &kp C_VOL_DN
             #define MSRD1  &kp LA(LG(LC(LEFT)))         // tap: rectangle bottom left
