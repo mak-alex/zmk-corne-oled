@@ -5,7 +5,7 @@
 /* Global */
 #include "os/shared/times.dtsi"
 #include "os/shared/general.dtsi"
-#include "os/macos/layers.dtsi"
+// #include "os/macos/layers.dtsi"
 
 / {
     macros {
