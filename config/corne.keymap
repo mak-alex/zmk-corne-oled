@@ -23,6 +23,7 @@
 
         #include "os/macos/macros/layers.dtsi"
         #include "os/macos/macros/global.dtsi"
+        #include "os/macos/macros/int.dtsi"
         #include "os/macos/macros/dev.dtsi"
     };
 };
