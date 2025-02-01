@@ -29,6 +29,17 @@
 / {
     behaviors {
         #include "os/macos/morph/layers.dtsi"
+        #include "os/macos/hold/layers.dtsi"
+        #include "os/macos/hold/settings.dtsi"
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        #include "os/macos/combos/base.dtsi"
+        #include "os/macos/combos/help.dtsi"
     };
 };
 
