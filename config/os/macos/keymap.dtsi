@@ -50,11 +50,34 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
         };
 
         mac_settings_layer {
+            #define MSLU5  &kp RG(PLUS)                 // tap: zoom in
+            #define MSLD5  &kp RG(MINUS)                // tap: zoom out
+            #define MSRU0  &kp C_VOL_UP
+            #define MSRU1  &kp LS(LA(LG(LC(LEFT))))     // tap: rectangle top left
+            #define MSRU2  &kp LS(LA(LG(UP)))           // tap: rectangle top half
+            #define MSRU3  &kp LS(LA(LG(LC(RIGHT))))    // tap: rectangle top right
+            #define MSRU4  &none
+            #define MSRU5  &bootloader                        // tap: task manager
+
+            #define MSRM0  &mp_mSTG_m                   // tap: vol mute | shift: mic mute
+            #define MSRM1  &hm RSHFT  LS(LA(LG(LEFT)))  // tap: rectangle left half
+            #define MSRM2  &hm_mSTG_RA  LALT 0          // tap: mp_mSTG_rectangle
+            #define MSRM3  &kp LS(LA(LG(RIGHT)))        // tap: rectangle right half
+            #define MSRM4  &kp LC(UP)                   // tap: mission control
+            #define MSRM5  &none
+
+            #define MSRD0  &kp C_VOL_DN
+            #define MSRD1  &kp LA(LG(LC(LEFT)))         // tap: rectangle bottom left
+            #define MSRD2  &kp LS(LA(LG(DOWN)))         // tap: rectangle bottom half
+            #define MSRD3  &kp LA(LG(LC(RIGHT)))        // tap: rectangle bottom right
+            #define MSRD4  &kp LC(DOWN)                 // tap: application window
+            #define MSRD5  &none
+
             display-name = "mSTG";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR              &bootloader
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp MINUS       &kp EQUAL  &kp LBRC   &kp RBRC  &kp PIPE              &kp GRAVE
-&trans  &trans           &trans            &trans      &trans        &trans          &kp UNDERSCORE  &kp PLUS   &kp LBKT   &kp RBKT  &kp NON_US_BACKSLASH  &kp TILDE
+&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      MSLU5       MSRU0  MSRU1  MSRU2  MSRU3  MSRU4  MSRU5
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    MSRM0  MSRM1  MSRM2  MSRM3  MSRM4  MSRM5
+&trans  &trans           &trans            &trans      &trans        MSLD5          MSRD0  MSRD1  MSRD2  MSRD3  MSRD4  MSRD5
                                            &trans      &trans        &trans          &trans          &trans     &trans
             >;
         };
