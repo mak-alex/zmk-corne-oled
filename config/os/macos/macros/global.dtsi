@@ -1,8 +1,9 @@
-switch_layuot: switch_layuot {
+switch_layuot: macro_macos_int_grave {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LC(SPACE)>, <&macro_release>;
 };
+
 // action:  `
 m_mi_g: macro_macos_int_grave {
     compatible = "zmk,behavior-macro";
