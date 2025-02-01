@@ -4,10 +4,10 @@
             #define MB15  &hm          LSHFT  D
             #define MB16  &hm          LCTRL  F
 
-            #define MB19  &hm  RCTRL  J  //J
-            #define MB20  &hm  RSHFT  K  //K
-            #define MB21  &hm  LALT   L  //L
-            #define MB22  &hm  RCMD   SEMI  //;
+            #define MB19  &hm          RCTRL  J
+            #define MB20  &hm          RSHFT  K
+            #define MB21  &hm          LALT   L
+            #define MB22  &hm          RCMD   SEMI
 
             #define MB35  &mp_m_stg
 
@@ -18,10 +18,10 @@
 
             display-name = "mBAS";
             bindings = <
-MKY_TAB       &kp Q  &kp W  &kp E      &kp R  &kp T          &kp Y        &kp U            &kp I      &kp O    &kp P     &switch_layuot
-&kp LSHFT     MB13   MB14   MB15     MB16  &kp G          &kp H        MB19      MB20     MB21      MB22  MNV_BSPC
-MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  MB35
-                            MB36    KEY_SPC MB38               MB39 MKY_RET  MB41
+MKY_TAB       &kp Q  &kp W  &kp E    &kp R      &kp T          &kp Y    &kp U    &kp I      &kp O    &kp P      MNV_DEL
+&mp_mk_bc     MB13   MB14   MB15     MB16       &kp G          &kp H    MB19     MB20       MB21     MB22       MNV_BSPC
+MKY_ESC       &kp Z  &kp X  &kp C    &kp V      &kp B          &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH   MB35
+                            MB36     KEY_SPC    MB38           MB39     MKY_RET  MB41
             >;
         };
 
@@ -43,9 +43,9 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
 
             display-name = "mDEV";
             bindings = <
-    MKY_ESC     &kp AT  &mp_mDEV_pound  &mp_mDEV_money    &kp PLUS   &m_mi_d               &m_mi_t    &kp MINUS     &kp UNDER    &kp PRCNT      &m_mi_c   MNV_DEL
+    MKY_TAB     &kp AT  &mp_mDEV_pound  &mp_mDEV_money    &kp PLUS   &m_mi_d               &m_mi_t    &kp MINUS     &kp UNDER    &kp PRCNT      &m_mi_c   MNV_DEL
   &mp_mk_bc       MD13            MD14            MD15        MD16   &m_mi_s               &m_mi_g         MD19          MD20         MD21         MD22  MNV_BSPC
-    MKY_TAB  &kp LG(R)        &kp LPAR        &kp RPAR   &kp ASTRK  &kp BSLH            &mp_mDEV_s  &mp_mDEV_qs        &kp LT       &kp GT  &mp_mDEV_ql      MD35
+    MKY_ESC  &kp LG(R)        &kp LPAR        &kp RPAR   &kp ASTRK  &kp BSLH            &mp_mDEV_s  &mp_mDEV_qs        &kp LT       &kp GT  &mp_mDEV_ql      MD35
                                                 &mp_cs     KEY_SPC      MD38                  MD39      MKY_RET        &mp_dc
             >;
         };
@@ -62,9 +62,9 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
 
             display-name = "mAXN";
             bindings = <
-&kp TAB      &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                  &kp N6         &kp N7             &kp N8              &kp N9          &kp N0      MNV_DEL
-&bootloader       &trans  &trans  &mp_ma_prev    &mp_ma_next  &kp LS(LG(NUMBER_4))    &kp LEFT       MPV_DWN           MPV_UP             &kp RIGHT       &caps_word  MNV_BSPC
-MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  MKY_REDO  &kp DEL                 &mt LALT LEFT  &trans  &trans  &mt LALT RIGHT  &trans      &trans
+      &kp N1        &kp N2      &kp N3    &kp N4        &kp N5                                  &kp N6     &kp N7     &kp N8     &kp N9      &kp N0      MNV_DEL
+      &bootloader   MKY_REDO    &trans    &mp_ma_prev   &mp_ma_next  &kp LS(LG(NUMBER_4))       &kp LEFT   MPV_DWN    MPV_UP     &kp RIGHT   &caps_word  MNV_BSPC
+      MKY_ESC MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE    &kp DEL                       &mt LALT LEFT  &trans  &trans  &mt LALT RIGHT  &trans      &trans
                              &mp_cs      KEY_SPC      MA38                   MA39  MKY_RET  &mp_dc
             >;
         };
@@ -76,8 +76,8 @@ MKY_UNDO      MKY_CUT  MKY_COPY    MKY_PASTE  MKY_REDO  &kp DEL                 
             display-name = "mFNK";
             bindings = <
 &kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6    &kp F7  &kp F8        &kp F9            &kp F10       &kp F11  &kp F12
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans   &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans        &kp K_PLAY_PAUSE  &trans        &trans   &trans
+&mp_mk_bc  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans   MNV_BSPC
+MKY_ESC  &trans    &trans    &trans     &trans     &trans    &trans  &trans        &kp K_PLAY_PAUSE  &trans        &trans   &trans
                             &mp_cs  KEY_SPC   MK38                   MK39  MKY_RET     &mp_dc
             >;
         };
