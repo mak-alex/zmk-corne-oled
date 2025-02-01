@@ -11,7 +11,7 @@
 
             #define MB35  &mp_m_stg
             #define MB38  &mo_mAXNmBAS_to_mAXN  0  0
-            #define MB39  &mo_mAXNmBAS_to_mFNK  0  RET
+            #define MB39  &mo_mAXNmBAS_to_mFNK  0  ENTER
             #define MB41  &mp_m_dev
 
             display-name = "mBAS";
