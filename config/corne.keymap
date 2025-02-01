@@ -9,7 +9,7 @@
 
 / {
     macros {
-        #include "os/shared/macros/global.dtsi"
+        #include "os/macos/macros/global.dtsi"
     };
 };
 
