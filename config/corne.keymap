@@ -104,7 +104,7 @@
         compatible = "zmk,conditional-layers";
 
         fn_set {
-            if-layers = <1 3>;
+            if-layers = <3 1>;
             then-layer = <4>;
         };
     };
