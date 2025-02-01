@@ -3,12 +3,3 @@ switch_layuot: macro_macos_int_switch_layout {
     #binding-cells = <0>;
     bindings = <&kp LC(SPACE)>, <&macro_release>;
 };
-
-
-// action:  ~
-m_mi_t: macro_macos_int_tilde {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings =
-        <&kp TILDE &kp SPACE>;
-};

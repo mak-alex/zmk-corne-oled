@@ -83,8 +83,28 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
         };
 
         mac_settings_layer {
+            #define MSLU0  MKY_ESC
+            #define MSLU1  &m_s_b1
+            #define MSLU2  &m_s_b2
+            #define MSLU3  &none
+            #define MSLU4  &kp LG(LS(C))                // tap: color picker
             #define MSLU5  &kp RG(PLUS)                 // tap: zoom in
+
+            #define MSLM0  &kp LC(LA(SPACE))            // tap: input source
+            #define MSLM1  &hm_mSTG_LC  LCTRL  0        // tap: m_s_b3
+            #define MSLM2  &m_s_b4
+            #define MSLM3  &kp LALT
+            #define MSLM4  &hm_mSTG_LS  LSHFT  0        // tap: mp_mSTG_screenshot
+            #define MSLM5  &mp_ma_zoom_reset            // tap: zoom reset | shift: zoom reset on vscode
+
+            #define MSLD0  &mp_sSTG_cb                  // tap: none | shift: clear current profile | alt: clear all profiles
+            #define MSLD1  &m_s_b5
+            #define MSLD2  &m_s_b6
+            #define MSLD3  &none
+            #define MSLD4  &mp_mSTG_f                   // tap: (finder) file explorer | alt: show/hide system files
             #define MSLD5  &kp RG(MINUS)                // tap: zoom out
+
+
             #define MSRU0  &kp C_VOL_UP
             #define MSRU1  &kp LS(LA(LG(LC(LEFT))))     // tap: rectangle top left
             #define MSRU2  &kp LS(LA(LG(UP)))           // tap: rectangle top half
@@ -106,11 +126,21 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
             #define MSRD4  &kp LC(DOWN)                 // tap: application window
             #define MSRD5  &none
 
+
+            #define MSLT2  &kp C_BRI_DN
+            #define MSLT1  KEY_SPC
+            #define MSLT0  &to_mBAS
+
+            #define MSRT0  &to_mAXN
+            #define MSRT1  MKY_RET
+            #define MSRT2  &kp C_BRI_UP
+
+
             display-name = "mSTG";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      MSLU5          MSRU0  MSRU1  MSRU2  MSRU3  MSRU4  MSRU5
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    MSRM0  MSRM1  MSRM2  MSRM3  MSRM4  MSRM5
-&trans  &trans           &trans            &trans      &trans        MSLD5          MSRD0  MSRD1  MSRD2  MSRD3  MSRD4  MSRD5
-                                           &trans      &trans        &trans          &trans          &trans     &trans
+              MSLU0  MSLU1  MSLU2  MSLU3  MSLU4  MSLU5    MSRU0  MSRU1  MSRU2  MSRU3  MSRU4  MSRU5
+              MSLM0  MSLM1  MSLM2  MSLM3  MSLM4  MSLM5    MSRM0  MSRM1  MSRM2  MSRM3  MSRM4  MSRM5
+              MSLD0  MSLD1  MSLD2  MSLD3  MSLD4  MSLD5    MSRD0  MSRD1  MSRD2  MSRD3  MSRD4  MSRD5
+                                   MSLT2  MSLT1  MSLT0    MSRT0  MSRT1  MSRT2
             >;
         };
