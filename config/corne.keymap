@@ -14,6 +14,12 @@
 };
 
 / {
+    behaviors {
+        #include "os/macos/morph/layers.dtsi"
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
