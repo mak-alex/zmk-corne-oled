@@ -10,12 +10,16 @@
             #define MB22  &hm  RCMD   SEMI  //;
 
             #define MB35  &mp_m_stg
+            #define MB38  &mo_mAXNmBAS_to_mAXN  0  0
+            #define MB39  &mo_mAXNmBAS_to_mFNK  0  0
+            #define MB41  &mp_m_dev
+
             display-name = "mBAS";
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E      &kp R  &kp T          &kp Y        &kp U            &kp I      &kp O    &kp P     &switch_layuot
-&kp LSHFT     MB13   MB14   MB15     MB16  &kp G          &kp H        MB19      MB20     MB21      MB22  &kp SQT
-MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  MB35
-                            &kp LCTRL  &mo 1  &lt 2 SPACE    &lt 3 ENTER  &lt 5 BACKSPACE  &kp RALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T             &kp Y        &kp U            &kp I      &kp O    &kp P     &switch_layuot
+&kp LSHFT   MB13   MB14   MB15      MB16  &kp G              &kp H        MB19      MB20     MB21      MB22  &kp SQT
+MKY_ESC     &kp Z  &kp X  &kp C     &kp V  &kp B             &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  MB35
+                          &kp LCTRL  &mo 1  &lt MKY_RET         MB39  MKY_BSPC      MB41
             >;
         };
 
@@ -75,7 +79,7 @@ MKY_ESC  &kp Z  &kp X  &kp C      &kp V  &kp B          &kp N        &kp M      
 
             display-name = "mSTG";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      MSLU5       MSRU0  MSRU1  MSRU2  MSRU3  MSRU4  MSRU5
+&trans  &kp EXCLAMATION  &kp AT            &kp HASH    &kp DLLR      MSLU5          MSRU0  MSRU1  MSRU2  MSRU3  MSRU4  MSRU5
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    MSRM0  MSRM1  MSRM2  MSRM3  MSRM4  MSRM5
 &trans  &trans           &trans            &trans      &trans        MSLD5          MSRD0  MSRD1  MSRD2  MSRD3  MSRD4  MSRD5
                                            &trans      &trans        &trans          &trans          &trans     &trans
