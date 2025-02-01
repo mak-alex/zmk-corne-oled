@@ -31,6 +31,7 @@
         #include "os/shared/morph/shared.dtsi"
         #include "os/shared/hold/shared.dtsi"
         #include "os/macos/morph/layers.dtsi"
+        #include "os/macos/morph/dev.dtsi"
         #include "os/macos/morph/settings.dtsi"
         #include "os/macos/hold/layers.dtsi"
         #include "os/macos/hold/settings.dtsi"
