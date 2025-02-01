@@ -4,13 +4,6 @@ switch_layuot: macro_macos_int_switch_layout {
     bindings = <&kp LC(SPACE)>, <&macro_release>;
 };
 
-// action:  `
-m_mi_g: macro_macos_int_grave {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings =
-        <&kp GRAVE &kp SPACE>;
-};
 
 // action:  ~
 m_mi_t: macro_macos_int_tilde {
