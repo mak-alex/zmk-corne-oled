@@ -7,6 +7,9 @@
 #include "os/shared/general.dtsi"
 #include "os/macos/layers.dtsi"
 
+/* Keys */
+#include "os/shared/keys.dtsi"
+#include "os/macos/keys.dtsi"
 
 /* Helpers */
 #include "helpers/macros.dtsi"
