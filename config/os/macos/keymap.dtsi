@@ -26,15 +26,15 @@ MKY_ESC       &kp Z  &kp X  &kp C    &kp V      &kp B          &kp N    &kp M   
         };
 
         mac_dev_layer {
-            #define MD13  &hm          LCTRL   AMPS
-            #define MD14  &hm          LCMD    LBRC
-            #define MD15  &hm          LALT    RBRC
-            #define MD16  &hm          LSHFT   EQUAL
+            #define MD13  &hm          LCMD   AMPS
+            #define MD14  &hm          LALT    LBRC
+            #define MD15  &hm          LSHFT    RBRC
+            #define MD16  &hm          LCTRL   EQUAL
 
-            #define MD19  &hm_mDEV_RS  RSHFT   0
-            #define MD20  &hm_mDEV_RA  LALT    0
-            #define MD21  &hm_mDEV_RC  RCMD    0
-            #define MD22  &hm          RCTRL   PIPE
+            #define MD19  &hm_mDEV_RS  RCTRL   0
+            #define MD20  &hm_mDEV_RA  RSHFT    0
+            #define MD21  &hm_mDEV_RC  LALT    0
+            #define MD22  &hm          RCMD   PIPE
 
             #define MD35  &kp LA(LG(I))                 // tap: dev tools
 
@@ -110,7 +110,7 @@ MKY_ESC  &trans    &trans    &trans     &trans     &trans    &trans  &trans     
             #define MSRU2  &kp LS(LA(LG(UP)))           // tap: rectangle top half
             #define MSRU3  &kp LS(LA(LG(LC(RIGHT))))    // tap: rectangle top right
             #define MSRU4  &none
-            #define MSRU5  &none                        // tap: task manager
+            #define MSRU5  &kp C_BRI_DN                        // tap: task manager
 
             #define MSRM0  &mp_mSTG_m                   // tap: vol mute | shift: mic mute
             #define MSRM1  &hm RSHFT  LS(LA(LG(LEFT)))  // tap: rectangle left half
@@ -124,16 +124,16 @@ MKY_ESC  &trans    &trans    &trans     &trans     &trans    &trans  &trans     
             #define MSRD2  &kp LS(LA(LG(DOWN)))         // tap: rectangle bottom half
             #define MSRD3  &kp LA(LG(LC(RIGHT)))        // tap: rectangle bottom right
             #define MSRD4  &kp LC(DOWN)                 // tap: application window
-            #define MSRD5  &none
+            #define MSRD5  &kp C_BRI_UP
 
 
-            #define MSLT2  &kp C_BRI_DN
+            #define MSLT2  &none
             #define MSLT1  KEY_SPC
             #define MSLT0  &to_mBAS
 
             #define MSRT0  &to_mAXN
             #define MSRT1  MKY_RET
-            #define MSRT2  &kp C_BRI_UP
+            #define MSRT2  &none
 
 
             display-name = "mSTG";
